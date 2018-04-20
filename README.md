@@ -4,8 +4,6 @@ Optimize hyperparameters for a support vector machine classifier (SVC) in scikit
 Usage examples
 --------------
 
-
-
 Example of usage:
 
 ```python
