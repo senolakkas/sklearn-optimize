@@ -3,7 +3,7 @@ import sklearn.datasets
 import numpy as np
 import pandas as pd
 
-data = sklearn.datasets.load_iris()
+data = sklearn.datasets.load_digits()
 
 X = data["data"]
 y = data["target"]
@@ -13,7 +13,7 @@ print(X.shape, y.shape)
 from sklearn.model_selection import StratifiedKFold, GridSearchCV, RandomizedSearchCV
 from sklearn.svm import SVC
 
-paramgrid = {"kernel": ["rbf"],
+paramgrid = {"kernel": ["rbf", "sigmoid", "linear"],
              "C": np.logspace(-9, 9, num=25, base=10),
              "gamma": np.logspace(-9, 9, num=25, base=10)}
 print("Size: ", len(paramgrid["kernel"]) * len(paramgrid["C"]) * len(paramgrid["gamma"]))

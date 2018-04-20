@@ -19,7 +19,7 @@ y = data["target"]
 from sklearn.svm import SVC
 from sklearn.model_selection import StratifiedKFold
 
-paramgrid = {"kernel": ["rbf"],
+paramgrid = {"kernel": ["rbf", "sigmoid", "linear"],
              "C": np.logspace(-9, 9, num=25, base=10),
              "gamma": np.logspace(-9, 9, num=25, base=10)}
 
